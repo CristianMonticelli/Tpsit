@@ -1,1 +1,4 @@
-aere5e5th
+class Moto(Veicolo):
+    def __init__(self, cilindrata):
+        self.cilindrata = cilindrata
+        
