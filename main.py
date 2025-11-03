@@ -1,5 +1,5 @@
 import moto
-import auto
+import camion
 
 print(moto.Moto(2, "bmw", 125))
-print(auto.Auto(4, "audi", 5))
+print(camion.Camion(6, "iveco", 3500))
