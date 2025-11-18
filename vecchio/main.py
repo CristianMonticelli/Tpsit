@@ -1,5 +1,5 @@
 import moto
-import camion
+import vecchio.camion as camion
 
 
 print(moto.Moto(2, "bmw", 125))
