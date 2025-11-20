@@ -34,5 +34,5 @@ print(controllo)
 espressioneinput = input("espressione regolare:")
 pattern = re.compile(espressioneinput)
 stringaInput = input("stringa da controllare:")
-print("mismatch" if pattern.search(stringaInput)==None else "match")
+print("mismatch" if pattern.match(stringaInput)==None else "match")
 
