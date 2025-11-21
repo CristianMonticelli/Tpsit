@@ -14,11 +14,15 @@ import re
 
 class EsprReg:
     def __init__(self, espressioneRegolare):
-        self.espressioneRegolare = espressioneRegolare
-
-    
+        self._espressioneRegolare = espressioneRegolare
+    @property
+    def espressioneRegolare(self):
+        return self._espressioneRegolare
+    @espressioneRegolare.setter
+    def espressioneRegolare(self,new_espressioneRegolare):
+        self._espressioneRegolare = new_espressioneRegolare
     def matching(self, stringa):
-        pattern = re.compile(self.espressioneRegolare)
+        pattern = re.compile(self._espressioneRegolare)
         matching = pattern.match (stringa)
         if matching == None:
             return "mismatch"
@@ -31,8 +35,9 @@ controllo = espresione1.matching(stringaInput)
 print(controllo)
 
 
-espressioneinput = input("espressione regolare:")
-pattern = re.compile(espressioneinput)
-stringaInput = input("stringa da controllare:")
-print("mismatch" if pattern.match(stringaInput)==None else "match")
+# espressioneinput = input("espressione regolare:")
+# pattern = re.compile(espressioneinput)
+# stringaInput = input("stringa da controllare:")
+# print("mismatch" if pattern.match(stringaInput)==None else "match")
 
+# print("mismatch" if re.compile(input("espressione regolare:")).match(input("stringa da controllare:"))==None else "match")
